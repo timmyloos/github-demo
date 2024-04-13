@@ -1,11 +1,9 @@
 def encode_password(password):
-    # Encode by shifting each digit up by 3, wrapping around using modulo 10
     encoded = ''.join(str((int(char) + 3) % 10) for char in password)
     return encoded
 
 
 def decode_password(encoded):
-    # Decode by shifting each digit down by 3, wrapping around if necessary
     decoded = ''.join(str((int(char) - 3) % 10) for char in encoded)
     return decoded
 
